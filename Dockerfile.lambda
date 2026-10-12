@@ -1,0 +1,10 @@
+FROM public.ecr.aws/lambda/python:3.12
+
+RUN mkdir -p /asset /out \
+    && python -m pip install --no-cache-dir --target /asset Pillow
+
+COPY image_processor.py lambda_handler.py /asset/
+COPY package_lambda.py /package_lambda.py
+
+ENTRYPOINT ["python", "/package_lambda.py"]
+CMD ["/asset", "/out/lambda.zip"]

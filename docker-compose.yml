@@ -1,0 +1,33 @@
+services:
+  localstack:
+    image: localstack/localstack:4.3.0
+    ports:
+      - "4566:4566"
+    environment:
+      SERVICES: s3,lambda,iam
+      DEBUG: "0"
+      DOCKER_HOST: unix:///var/run/docker.sock
+      LAMBDA_DOCKER_NETWORK: localstack-network
+    volumes:
+      - "${LOCALSTACK_VOLUME_DIR:-./.localstack}:/var/lib/localstack"
+      - "/var/run/docker.sock:/var/run/docker.sock"
+    networks:
+      - localstack-network
+    healthcheck:
+      test: ["CMD", "bash", "-c", "curl -fsS http://localhost:4566/_localstack/health"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  lambda-package:
+    build:
+      context: .
+      dockerfile: Dockerfile.lambda
+    profiles: ["tools"]
+    volumes:
+      - "./build:/out"
+
+networks:
+  localstack-network:
+    name: localstack-network
+
