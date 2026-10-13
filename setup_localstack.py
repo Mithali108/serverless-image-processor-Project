@@ -53,34 +53,47 @@ def deploy_lambda(lambda_client) -> str:
     }
     package = PACKAGE_PATH.read_bytes()
     try:
-        response = lambda_client.get_function(FunctionName=FUNCTION_NAME)
+        try:
+            response = lambda_client.get_function(FunctionName=FUNCTION_NAME)
+        except ClientError as error:
+            if error.response.get("Error", {}).get("Code") not in {
+                "ResourceNotFoundException",
+                "ResourceNotFound",
+            }:
+                raise
+            response = lambda_client.create_function(
+                **function_config, Code={"ZipFile": package}
+            )
+            print(f"Created Lambda: {FUNCTION_NAME}")
+        else:
+            lambda_client.update_function_code(
+                FunctionName=FUNCTION_NAME, ZipFile=package
+            )
+            lambda_client.update_function_configuration(
+                FunctionName=FUNCTION_NAME,
+                Runtime=function_config["Runtime"],
+                Role=function_config["Role"],
+                Handler=function_config["Handler"],
+                Timeout=function_config["Timeout"],
+                MemorySize=function_config["MemorySize"],
+                Environment=function_config["Environment"],
+            )
+            response = lambda_client.get_function(FunctionName=FUNCTION_NAME)
+            print(f"Updated Lambda: {FUNCTION_NAME}")
     except ClientError as error:
         if error.response.get("Error", {}).get("Code") not in {
-            "ResourceNotFoundException",
-            "ResourceNotFound",
+            "ResourceConflictException",
+            "ResourceInUseException",
         }:
             raise
-        response = lambda_client.create_function(
-            **function_config, Code={"ZipFile": package}
-        )
-        print(f"Created Lambda: {FUNCTION_NAME}")
-    else:
-        lambda_client.update_function_code(
-            FunctionName=FUNCTION_NAME, ZipFile=package
-        )
-        lambda_client.update_function_configuration(
-            FunctionName=FUNCTION_NAME,
-            Runtime=function_config["Runtime"],
-            Role=function_config["Role"],
-            Handler=function_config["Handler"],
-            Timeout=function_config["Timeout"],
-            MemorySize=function_config["MemorySize"],
-            Environment=function_config["Environment"],
-        )
         response = lambda_client.get_function(FunctionName=FUNCTION_NAME)
-        print(f"Updated Lambda: {FUNCTION_NAME}")
 
-    return response["Configuration"]["FunctionArn"]
+    function_arn = response.get("FunctionArn") or response.get(
+        "Configuration", {}
+    ).get("FunctionArn")
+    if not function_arn:
+        raise ValueError("Lambda deployment response did not include a FunctionArn.")
+    return function_arn
 
 
 def allow_s3_invocation(lambda_client, function_arn: str, bucket_arn: str) -> None:
