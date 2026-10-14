@@ -1,0 +1,397 @@
+%PDF-1.4
+%Report
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [6 0 R 8 0 R 10 0 R 12 0 R 14 0 R 16 0 R] /Count 6 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Length 2411 >>
+stream
+1 1 1 rg 0 0 595 842 re f
+0.12 0.29 0.55 rg BT /F2 8 Tf 1 0 0 1 52.0 814.0 Tm (SERVERLESS IMAGE PROCESSOR) Tj ET
+0.38 0.43 0.50 rg BT /F1 8 Tf 1 0 0 1 454.0 814.0 Tm (PROJECT REPORT) Tj ET
+0.82 0.86 0.91 RG 0.7 w 52 801 m 543 801 l S
+0.12 0.40 0.72 rg 52 655 6 112 re f
+0.12 0.40 0.72 rg BT /F2 12 Tf 1 0 0 1 72.0 748.0 Tm (SERVERLESS IMAGE) Tj ET
+0.08 0.20 0.38 rg BT /F2 32 Tf 1 0 0 1 72.0 708.0 Tm (PROCESSOR) Tj ET
+0.34 0.40 0.48 rg BT /F1 13 Tf 1 0 0 1 72.0 680.0 Tm (Project implementation and operations report) Tj ET
+0.22 0.28 0.36 rg BT /F1 12 Tf 1 0 0 1 52.0 625.0 Tm (A detailed description of the image thumbnail application, its browser and) Tj ET
+0.22 0.28 0.36 rg BT /F1 12 Tf 1 0 0 1 52.0 606.0 Tm (local-folder workflows, its simulated AWS architecture, setup procedure,) Tj ET
+0.22 0.28 0.36 rg BT /F1 12 Tf 1 0 0 1 52.0 587.0 Tm (test evidence, and next steps.) Tj ET
+0.93 0.96 0.99 rg 52 443 491 122 re f
+0.12 0.29 0.55 rg BT /F2 10.5 Tf 1 0 0 1 65.0 546.0 Tm (PROJECT SNAPSHOT) Tj ET
+0.16 0.22 0.32 rg BT /F1 9.2 Tf 1 0 0 1 65.0 527.0 Tm (Interface: Streamlit browser UI) Tj ET
+0.16 0.22 0.32 rg BT /F1 9.2 Tf 1 0 0 1 65.0 511.0 Tm (Processing: Python + Pillow in an AWS Lambda-compatible handler) Tj ET
+0.16 0.22 0.32 rg BT /F1 9.2 Tf 1 0 0 1 65.0 495.0 Tm (Cloud simulation: LocalStack S3, Lambda, and IAM APIs) Tj ET
+0.16 0.22 0.32 rg BT /F1 9.2 Tf 1 0 0 1 65.0 479.0 Tm (Local alternative: command-line folder processor) Tj ET
+0.16 0.22 0.32 rg BT /F1 9.2 Tf 1 0 0 1 65.0 463.0 Tm (Current verification: 6 unit tests pass; LocalStack is not running now) Tj ET
+0.12 0.29 0.55 rg BT /F2 11.5 Tf 1 0 0 1 52.0 429.0 Tm (Purpose of this report) Tj ET
+0.16 0.22 0.32 rg BT /F1 10.5 Tf 1 0 0 1 52.0 411.0 Tm (Use this report as a project explanation for a class or technical presentation. It) Tj ET
+0.16 0.22 0.32 rg BT /F1 10.5 Tf 1 0 0 1 52.0 395.0 Tm (separates implemented behavior from integration checks that still need to be performed) Tj ET
+0.16 0.22 0.32 rg BT /F1 10.5 Tf 1 0 0 1 52.0 379.0 Tm (with Docker and LocalStack.) Tj ET
+0.42 0.47 0.54 rg BT /F1 8.5 Tf 1 0 0 1 52.0 95.0 Tm (Project repository: serverless-image-processor-Project) Tj ET
+0.82 0.86 0.91 RG 0.7 w 52 48 m 543 48 l S
+0.42 0.47 0.54 rg BT /F1 7.5 Tf 1 0 0 1 52.0 31.0 Tm (LocalStack-based image thumbnail demo | Prepared 13 October 2026) Tj ET
+0.42 0.47 0.54 rg BT /F1 7.5 Tf 1 0 0 1 505.0 31.0 Tm (Page 1) Tj ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 5 0 R >>
+endobj
+7 0 obj
+<< /Length 4586 >>
+stream
+1 1 1 rg 0 0 595 842 re f
+0.12 0.29 0.55 rg BT /F2 8 Tf 1 0 0 1 52.0 814.0 Tm (SERVERLESS IMAGE PROCESSOR) Tj ET
+0.38 0.43 0.50 rg BT /F1 8 Tf 1 0 0 1 454.0 814.0 Tm (PROJECT REPORT) Tj ET
+0.82 0.86 0.91 RG 0.7 w 52 801 m 543 801 l S
+0.12 0.29 0.55 rg BT /F2 16 Tf 1 0 0 1 52.0 772.0 Tm (1. Executive summary) Tj ET
+0.79 0.85 0.92 RG 0.8 w 52 763 m 543 763 l S
+0.16 0.22 0.32 rg BT /F1 10.4 Tf 1 0 0 1 52.0 746.0 Tm (The project creates smaller, format-preserving image thumbnails. It has two distinct) Tj ET
+0.16 0.22 0.32 rg BT /F1 10.4 Tf 1 0 0 1 52.0 730.0 Tm (ways to use the processor: a local command-line workflow that reads and writes files in) Tj ET
+0.16 0.22 0.32 rg BT /F1 10.4 Tf 1 0 0 1 52.0 714.0 Tm (folders, and a browser workflow that uploads through a Streamlit interface to LocalStack) Tj ET
+0.16 0.22 0.32 rg BT /F1 10.4 Tf 1 0 0 1 52.0 698.0 Tm (S3 and relies on an S3 event to invoke a Lambda function.) Tj ET
+0.16 0.22 0.32 rg BT /F1 10.4 Tf 1 0 0 1 52.0 677.0 Tm (The browser flow is a local development demonstration of an event-driven serverless) Tj ET
+0.16 0.22 0.32 rg BT /F1 10.4 Tf 1 0 0 1 52.0 661.0 Tm (design. LocalStack simulates AWS services on the developer machine; this setup is not an) Tj ET
+0.16 0.22 0.32 rg BT /F1 10.4 Tf 1 0 0 1 52.0 645.0 Tm (AWS production deployment and does not create real cloud buckets.) Tj ET
+0.93 0.96 0.99 rg 52 536 491 90 re f
+0.12 0.29 0.55 rg BT /F2 10.5 Tf 1 0 0 1 65.0 607.0 Tm (KEY DISTINCTION) Tj ET
+0.16 0.22 0.32 rg BT /F1 9.2 Tf 1 0 0 1 65.0 588.0 Tm (Browser uploads: input-bucket -> S3 event -> Lambda -> output-bucket) Tj ET
+0.16 0.22 0.32 rg BT /F1 9.2 Tf 1 0 0 1 65.0 572.0 Tm (Command line: input_images folder -> local Python processing -> output_images folder) Tj ET
+0.16 0.22 0.32 rg BT /F1 9.2 Tf 1 0 0 1 65.0 556.0 Tm (These workflows do not automatically copy files between one another.) Tj ET
+0.12 0.29 0.55 rg BT /F2 16 Tf 1 0 0 1 52.0 519.0 Tm (2. Goals and project scope) Tj ET
+0.79 0.85 0.92 RG 0.8 w 52 510 m 543 510 l S
+0.12 0.40 0.72 rg BT /F2 10 Tf 1 0 0 1 57.0 493.0 Tm (-) Tj ET
+0.16 0.22 0.32 rg BT /F1 9.7 Tf 1 0 0 1 71.0 493.0 Tm (Accept supported raster image files and generate thumbnails up to 300 x 300 pixels while) Tj ET
+0.12 0.40 0.72 rg BT /F2 10 Tf 1 0 0 1 57.0 479.0 Tm ( ) Tj ET
+0.16 0.22 0.32 rg BT /F1 9.7 Tf 1 0 0 1 71.0 479.0 Tm (preserving aspect ratio.) Tj ET
+0.12 0.40 0.72 rg BT /F2 10 Tf 1 0 0 1 57.0 462.0 Tm (-) Tj ET
+0.16 0.22 0.32 rg BT /F1 9.7 Tf 1 0 0 1 71.0 462.0 Tm (Keep source format where possible; do not enlarge images already smaller than the target) Tj ET
+0.12 0.40 0.72 rg BT /F2 10 Tf 1 0 0 1 57.0 448.0 Tm ( ) Tj ET
+0.16 0.22 0.32 rg BT /F1 9.7 Tf 1 0 0 1 71.0 448.0 Tm (bounds.) Tj ET
+0.12 0.40 0.72 rg BT /F2 10 Tf 1 0 0 1 57.0 431.0 Tm (-) Tj ET
+0.16 0.22 0.32 rg BT /F1 9.7 Tf 1 0 0 1 71.0 431.0 Tm (Provide a browser-based upload, preview, and download experience for the LocalStack) Tj ET
+0.12 0.40 0.72 rg BT /F2 10 Tf 1 0 0 1 57.0 417.0 Tm ( ) Tj ET
+0.16 0.22 0.32 rg BT /F1 9.7 Tf 1 0 0 1 71.0 417.0 Tm (demonstration.) Tj ET
+0.12 0.40 0.72 rg BT /F2 10 Tf 1 0 0 1 57.0 400.0 Tm (-) Tj ET
+0.16 0.22 0.32 rg BT /F1 9.7 Tf 1 0 0 1 71.0 400.0 Tm (Retain a simpler local-folder processor that works without starting LocalStack.) Tj ET
+0.12 0.40 0.72 rg BT /F2 10 Tf 1 0 0 1 57.0 383.0 Tm (-) Tj ET
+0.16 0.22 0.32 rg BT /F1 9.7 Tf 1 0 0 1 71.0 383.0 Tm (Package the Lambda handler and Pillow dependency for the Linux Python 3.12 runtime,) Tj ET
+0.12 0.40 0.72 rg BT /F2 10 Tf 1 0 0 1 57.0 369.0 Tm ( ) Tj ET
+0.16 0.22 0.32 rg BT /F1 9.7 Tf 1 0 0 1 71.0 369.0 Tm (including when building on Windows.) Tj ET
+0.12 0.29 0.55 rg BT /F2 16 Tf 1 0 0 1 52.0 349.0 Tm (3. Technology stack) Tj ET
+0.79 0.85 0.92 RG 0.8 w 52 340 m 543 340 l S
+0.16 0.22 0.32 rg BT /F1 10.2 Tf 1 0 0 1 52.0 323.0 Tm (Python 3.10+ is documented for the project. Pillow performs image decoding, orientation) Tj ET
+0.16 0.22 0.32 rg BT /F1 10.2 Tf 1 0 0 1 52.0 308.0 Tm (handling, resizing, and encoding. Boto3 calls the S3 and Lambda-compatible LocalStack APIs.) Tj ET
+0.16 0.22 0.32 rg BT /F1 10.2 Tf 1 0 0 1 52.0 293.0 Tm (Streamlit provides the web UI. Docker Compose runs LocalStack and builds the Lambda) Tj ET
+0.16 0.22 0.32 rg BT /F1 10.2 Tf 1 0 0 1 52.0 278.0 Tm (artifact from the AWS Lambda Python 3.12 base image.) Tj ET
+0.82 0.86 0.91 RG 0.7 w 52 48 m 543 48 l S
+0.42 0.47 0.54 rg BT /F1 7.5 Tf 1 0 0 1 52.0 31.0 Tm (LocalStack-based image thumbnail demo | Prepared 13 October 2026) Tj ET
+0.42 0.47 0.54 rg BT /F1 7.5 Tf 1 0 0 1 505.0 31.0 Tm (Page 2) Tj ET
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 7 0 R >>
+endobj
+9 0 obj
+<< /Length 5268 >>
+stream
+1 1 1 rg 0 0 595 842 re f
+0.12 0.29 0.55 rg BT /F2 8 Tf 1 0 0 1 52.0 814.0 Tm (SERVERLESS IMAGE PROCESSOR) Tj ET
+0.38 0.43 0.50 rg BT /F1 8 Tf 1 0 0 1 454.0 814.0 Tm (PROJECT REPORT) Tj ET
+0.82 0.86 0.91 RG 0.7 w 52 801 m 543 801 l S
+0.12 0.29 0.55 rg BT /F2 16 Tf 1 0 0 1 52.0 772.0 Tm (4. Architecture and browser request flow) Tj ET
+0.79 0.85 0.92 RG 0.8 w 52 763 m 543 763 l S
+0.12 0.29 0.55 rg BT /F2 11.5 Tf 1 0 0 1 52.0 746.0 Tm (End-to-end sequence) Tj ET
+0.95 0.97 0.99 rg 52 633 491 100 re f
+0.20 0.44 0.74 RG 2.2 w 52 633 m 52 733 l S
+0.13 0.20 0.29 rg BT /F1 8.5 Tf 1 0 0 1 64.0 717.0 Tm (Browser user selects a file and presses Generate Thumbnail.) Tj ET
+0.13 0.20 0.29 rg BT /F1 8.5 Tf 1 0 0 1 64.0 705.0 Tm (app.py reads the uploaded bytes in memory and creates a unique uploads/<id>_<name> key.) Tj ET
+0.13 0.20 0.29 rg BT /F1 8.5 Tf 1 0 0 1 64.0 693.0 Tm (Boto3 PutObject stores the original in LocalStack input-bucket.) Tj ET
+0.13 0.20 0.29 rg BT /F1 8.5 Tf 1 0 0 1 64.0 681.0 Tm (LocalStack S3 emits ObjectCreated; the configured notification invokes Lambda.) Tj ET
+0.13 0.20 0.29 rg BT /F1 8.5 Tf 1 0 0 1 64.0 669.0 Tm (lambda_handler.py reads the original object and calls shared image_processor.py code.) Tj ET
+0.13 0.20 0.29 rg BT /F1 8.5 Tf 1 0 0 1 64.0 657.0 Tm (Lambda writes the thumbnail under the matching thumbnail key to output-bucket.) Tj ET
+0.13 0.20 0.29 rg BT /F1 8.5 Tf 1 0 0 1 64.0 645.0 Tm (app.py polls that exact key \(up to 30 seconds\), then shows preview and download.) Tj ET
+0.16 0.22 0.32 rg BT /F1 10.1 Tf 1 0 0 1 52.0 618.0 Tm (The UI computes the expected output key using thumbnail_object_key. The Lambda uses the) Tj ET
+0.16 0.22 0.32 rg BT /F1 10.1 Tf 1 0 0 1 52.0 603.0 Tm (same helper, so the source object key and generated thumbnail key follow a shared naming) Tj ET
+0.16 0.22 0.32 rg BT /F1 10.1 Tf 1 0 0 1 52.0 588.0 Tm (convention. A random prefix in each upload key prevents uploaded files with the same) Tj ET
+0.16 0.22 0.32 rg BT /F1 10.1 Tf 1 0 0 1 52.0 573.0 Tm (original filename from colliding.) Tj ET
+0.12 0.29 0.55 rg BT /F2 11.5 Tf 1 0 0 1 52.0 553.0 Tm (Browser interaction and data handling) Tj ET
+0.12 0.40 0.72 rg BT /F2 10 Tf 1 0 0 1 57.0 535.0 Tm (-) Tj ET
+0.16 0.22 0.32 rg BT /F1 9.7 Tf 1 0 0 1 71.0 535.0 Tm (The app defaults to LocalStack at http://localhost:4566, input-bucket and output-bucket;) Tj ET
+0.12 0.40 0.72 rg BT /F2 10 Tf 1 0 0 1 57.0 521.0 Tm ( ) Tj ET
+0.16 0.22 0.32 rg BT /F1 9.7 Tf 1 0 0 1 71.0 521.0 Tm (environment variables can override the app endpoint and bucket names.) Tj ET
+0.12 0.40 0.72 rg BT /F2 10 Tf 1 0 0 1 57.0 504.0 Tm (-) Tj ET
+0.16 0.22 0.32 rg BT /F1 9.7 Tf 1 0 0 1 71.0 504.0 Tm (The upload is sent as bytes with its content type. The UI keeps the returned thumbnail) Tj ET
+0.12 0.40 0.72 rg BT /F2 10 Tf 1 0 0 1 57.0 490.0 Tm ( ) Tj ET
+0.16 0.22 0.32 rg BT /F1 9.7 Tf 1 0 0 1 71.0 490.0 Tm (bytes in Streamlit session state for display and download.) Tj ET
+0.12 0.40 0.72 rg BT /F2 10 Tf 1 0 0 1 57.0 473.0 Tm (-) Tj ET
+0.16 0.22 0.32 rg BT /F1 9.7 Tf 1 0 0 1 71.0 473.0 Tm (The download button serves the thumbnail held by the app; it does not copy files into) Tj ET
+0.12 0.40 0.72 rg BT /F2 10 Tf 1 0 0 1 57.0 459.0 Tm ( ) Tj ET
+0.16 0.22 0.32 rg BT /F1 9.7 Tf 1 0 0 1 71.0 459.0 Tm (output_images.) Tj ET
+0.12 0.40 0.72 rg BT /F2 10 Tf 1 0 0 1 57.0 442.0 Tm (-) Tj ET
+0.16 0.22 0.32 rg BT /F1 9.7 Tf 1 0 0 1 71.0 442.0 Tm (The sidebar displays endpoint and bucket names as configuration information; it is not a) Tj ET
+0.12 0.40 0.72 rg BT /F2 10 Tf 1 0 0 1 57.0 428.0 Tm ( ) Tj ET
+0.16 0.22 0.32 rg BT /F1 9.7 Tf 1 0 0 1 71.0 428.0 Tm (live health check.) Tj ET
+0.12 0.29 0.55 rg BT /F2 16 Tf 1 0 0 1 52.0 408.0 Tm (5. Local-folder workflow) Tj ET
+0.79 0.85 0.92 RG 0.8 w 52 399 m 543 399 l S
+0.16 0.22 0.32 rg BT /F1 10.2 Tf 1 0 0 1 52.0 382.0 Tm (Running image_processor.py directly invokes the separate command-line path. By default, it) Tj ET
+0.16 0.22 0.32 rg BT /F1 10.2 Tf 1 0 0 1 52.0 367.0 Tm (scans files directly in input_images and writes named thumbnails into output_images,) Tj ET
+0.16 0.22 0.32 rg BT /F1 10.2 Tf 1 0 0 1 52.0 352.0 Tm (creating the output folder if needed. The folders are relative to the current working) Tj ET
+0.16 0.22 0.32 rg BT /F1 10.2 Tf 1 0 0 1 52.0 337.0 Tm (directory and can be overridden with --input and --output.) Tj ET
+0.95 0.97 0.99 rg 52 282 491 40 re f
+0.20 0.44 0.74 RG 2.2 w 52 282 m 52 322 l S
+0.13 0.20 0.29 rg BT /F1 8.5 Tf 1 0 0 1 64.0 306.0 Tm (.\\.venv\\Scripts\\python.exe image_processor.py) Tj ET
+0.13 0.20 0.29 rg BT /F1 8.5 Tf 1 0 0 1 64.0 294.0 Tm (.\\.venv\\Scripts\\python.exe image_processor.py --input "C:\\photos" --output "C:\\thumbs") Tj ET
+0.16 0.22 0.32 rg BT /F1 10.1 Tf 1 0 0 1 52.0 267.0 Tm (The CLI skips unsupported file extensions and does not scan subfolders. The image) Tj ET
+0.16 0.22 0.32 rg BT /F1 10.1 Tf 1 0 0 1 52.0 252.0 Tm (extension list in image_processor.py includes BMP, GIF, JPEG/JPG, PNG, TIFF/TIF, and WebP.) Tj ET
+0.82 0.86 0.91 RG 0.7 w 52 48 m 543 48 l S
+0.42 0.47 0.54 rg BT /F1 7.5 Tf 1 0 0 1 52.0 31.0 Tm (LocalStack-based image thumbnail demo | Prepared 13 October 2026) Tj ET
+0.42 0.47 0.54 rg BT /F1 7.5 Tf 1 0 0 1 505.0 31.0 Tm (Page 3) Tj ET
+endstream
+endobj
+10 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 9 0 R >>
+endobj
+11 0 obj
+<< /Length 6192 >>
+stream
+1 1 1 rg 0 0 595 842 re f
+0.12 0.29 0.55 rg BT /F2 8 Tf 1 0 0 1 52.0 814.0 Tm (SERVERLESS IMAGE PROCESSOR) Tj ET
+0.38 0.43 0.50 rg BT /F1 8 Tf 1 0 0 1 454.0 814.0 Tm (PROJECT REPORT) Tj ET
+0.82 0.86 0.91 RG 0.7 w 52 801 m 543 801 l S
+0.12 0.29 0.55 rg BT /F2 16 Tf 1 0 0 1 52.0 772.0 Tm (6. Main files and responsibilities) Tj ET
+0.79 0.85 0.92 RG 0.8 w 52 763 m 543 763 l S
+0.12 0.29 0.55 rg BT /F2 11.5 Tf 1 0 0 1 52.0 746.0 Tm (Application modules) Tj ET
+0.12 0.40 0.72 rg BT /F2 10 Tf 1 0 0 1 57.0 728.0 Tm (-) Tj ET
+0.16 0.22 0.32 rg BT /F1 9.7 Tf 1 0 0 1 71.0 728.0 Tm (app.py - Streamlit page; validates and previews the selected image, uploads it to S3,) Tj ET
+0.12 0.40 0.72 rg BT /F2 10 Tf 1 0 0 1 57.0 714.0 Tm ( ) Tj ET
+0.16 0.22 0.32 rg BT /F1 9.7 Tf 1 0 0 1 71.0 714.0 Tm (waits for the result, and offers a download.) Tj ET
+0.12 0.40 0.72 rg BT /F2 10 Tf 1 0 0 1 57.0 697.0 Tm (-) Tj ET
+0.16 0.22 0.32 rg BT /F1 9.7 Tf 1 0 0 1 71.0 697.0 Tm (image_processor.py - shared thumbnail operations and CLI entry point; defines accepted) Tj ET
+0.12 0.40 0.72 rg BT /F2 10 Tf 1 0 0 1 57.0 683.0 Tm ( ) Tj ET
+0.16 0.22 0.32 rg BT /F1 9.7 Tf 1 0 0 1 71.0 683.0 Tm (extensions, thumbnail naming, and local-folder processing.) Tj ET
+0.12 0.40 0.72 rg BT /F2 10 Tf 1 0 0 1 57.0 666.0 Tm (-) Tj ET
+0.16 0.22 0.32 rg BT /F1 9.7 Tf 1 0 0 1 71.0 666.0 Tm (lambda_handler.py - Lambda entry point; reads S3 event records, downloads each supported) Tj ET
+0.12 0.40 0.72 rg BT /F2 10 Tf 1 0 0 1 57.0 652.0 Tm ( ) Tj ET
+0.16 0.22 0.32 rg BT /F1 9.7 Tf 1 0 0 1 71.0 652.0 Tm (original, generates a thumbnail, and stores it in the output bucket.) Tj ET
+0.12 0.40 0.72 rg BT /F2 10 Tf 1 0 0 1 57.0 635.0 Tm (-) Tj ET
+0.16 0.22 0.32 rg BT /F1 9.7 Tf 1 0 0 1 71.0 635.0 Tm (setup_localstack.py - creates input/output buckets as needed, deploys or updates Lambda,) Tj ET
+0.12 0.40 0.72 rg BT /F2 10 Tf 1 0 0 1 57.0 621.0 Tm ( ) Tj ET
+0.16 0.22 0.32 rg BT /F1 9.7 Tf 1 0 0 1 71.0 621.0 Tm (grants S3 invocation permission, and configures the bucket notification.) Tj ET
+0.12 0.40 0.72 rg BT /F2 10 Tf 1 0 0 1 57.0 604.0 Tm (-) Tj ET
+0.16 0.22 0.32 rg BT /F1 9.7 Tf 1 0 0 1 71.0 604.0 Tm (Dockerfile.lambda - uses the AWS Lambda Python 3.12 base image and installs Pillow into) Tj ET
+0.12 0.40 0.72 rg BT /F2 10 Tf 1 0 0 1 57.0 590.0 Tm ( ) Tj ET
+0.16 0.22 0.32 rg BT /F1 9.7 Tf 1 0 0 1 71.0 590.0 Tm (the deployment asset directory.) Tj ET
+0.12 0.40 0.72 rg BT /F2 10 Tf 1 0 0 1 57.0 573.0 Tm (-) Tj ET
+0.16 0.22 0.32 rg BT /F1 9.7 Tf 1 0 0 1 71.0 573.0 Tm (package_lambda.py - writes the contents of the asset directory to build/lambda.zip.) Tj ET
+0.12 0.40 0.72 rg BT /F2 10 Tf 1 0 0 1 57.0 556.0 Tm (-) Tj ET
+0.16 0.22 0.32 rg BT /F1 9.7 Tf 1 0 0 1 71.0 556.0 Tm (docker-compose.yml - defines LocalStack and the one-shot Lambda package build service.) Tj ET
+0.12 0.40 0.72 rg BT /F2 10 Tf 1 0 0 1 57.0 539.0 Tm (-) Tj ET
+0.16 0.22 0.32 rg BT /F1 9.7 Tf 1 0 0 1 71.0 539.0 Tm (test_local.py - automated unit tests for image resizing, file workflow validation, and) Tj ET
+0.12 0.40 0.72 rg BT /F2 10 Tf 1 0 0 1 57.0 525.0 Tm ( ) Tj ET
+0.16 0.22 0.32 rg BT /F1 9.7 Tf 1 0 0 1 71.0 525.0 Tm (naming helpers.) Tj ET
+0.12 0.29 0.55 rg BT /F2 16 Tf 1 0 0 1 52.0 505.0 Tm (7. Image-processing behavior) Tj ET
+0.79 0.85 0.92 RG 0.8 w 52 496 m 543 496 l S
+0.12 0.40 0.72 rg BT /F2 10 Tf 1 0 0 1 57.0 479.0 Tm (-) Tj ET
+0.16 0.22 0.32 rg BT /F1 9.7 Tf 1 0 0 1 71.0 479.0 Tm (The target thumbnail bound is 300 x 300 pixels; Pillow preserves aspect ratio when) Tj ET
+0.12 0.40 0.72 rg BT /F2 10 Tf 1 0 0 1 57.0 465.0 Tm ( ) Tj ET
+0.16 0.22 0.32 rg BT /F1 9.7 Tf 1 0 0 1 71.0 465.0 Tm (resizing.) Tj ET
+0.12 0.40 0.72 rg BT /F2 10 Tf 1 0 0 1 57.0 448.0 Tm (-) Tj ET
+0.16 0.22 0.32 rg BT /F1 9.7 Tf 1 0 0 1 71.0 448.0 Tm (EXIF orientation is applied before resizing. JPEG images with incompatible modes are) Tj ET
+0.12 0.40 0.72 rg BT /F2 10 Tf 1 0 0 1 57.0 434.0 Tm ( ) Tj ET
+0.16 0.22 0.32 rg BT /F1 9.7 Tf 1 0 0 1 71.0 434.0 Tm (converted to RGB for saving.) Tj ET
+0.12 0.40 0.72 rg BT /F2 10 Tf 1 0 0 1 57.0 417.0 Tm (-) Tj ET
+0.16 0.22 0.32 rg BT /F1 9.7 Tf 1 0 0 1 71.0 417.0 Tm (The thumbnail name adds _thumbnail before the lowercased file extension. For example,) Tj ET
+0.12 0.40 0.72 rg BT /F2 10 Tf 1 0 0 1 57.0 403.0 Tm ( ) Tj ET
+0.16 0.22 0.32 rg BT /F1 9.7 Tf 1 0 0 1 71.0 403.0 Tm (photo.JPG becomes photo_thumbnail.jpg.) Tj ET
+0.12 0.40 0.72 rg BT /F2 10 Tf 1 0 0 1 57.0 386.0 Tm (-) Tj ET
+0.16 0.22 0.32 rg BT /F1 9.7 Tf 1 0 0 1 71.0 386.0 Tm (The Lambda derives the thumbnail object key from the original key, preserving its folder) Tj ET
+0.12 0.40 0.72 rg BT /F2 10 Tf 1 0 0 1 57.0 372.0 Tm ( ) Tj ET
+0.16 0.22 0.32 rg BT /F1 9.7 Tf 1 0 0 1 71.0 372.0 Tm (prefix.) Tj ET
+0.12 0.40 0.72 rg BT /F2 10 Tf 1 0 0 1 57.0 355.0 Tm (-) Tj ET
+0.16 0.22 0.32 rg BT /F1 9.7 Tf 1 0 0 1 71.0 355.0 Tm (Non-supported file types are skipped by the Lambda and the local directory scanner.) Tj ET
+0.12 0.29 0.55 rg BT /F2 16 Tf 1 0 0 1 52.0 335.0 Tm (8. Setup and run instructions \(PowerShell\)) Tj ET
+0.79 0.85 0.92 RG 0.8 w 52 326 m 543 326 l S
+0.12 0.29 0.55 rg BT /F2 11.5 Tf 1 0 0 1 52.0 309.0 Tm (Prerequisites) Tj ET
+0.16 0.22 0.32 rg BT /F1 10 Tf 1 0 0 1 52.0 291.0 Tm (Install Python 3.10 or newer and Docker Desktop with Compose, start Docker Desktop, and) Tj ET
+0.16 0.22 0.32 rg BT /F1 10 Tf 1 0 0 1 52.0 276.0 Tm (open PowerShell in the project root. Dependencies are Pillow, boto3, and streamlit; a) Tj ET
+0.16 0.22 0.32 rg BT /F1 10 Tf 1 0 0 1 52.0 261.0 Tm (virtual environment is recommended.) Tj ET
+0.95 0.97 0.99 rg 52 194 491 52 re f
+0.20 0.44 0.74 RG 2.2 w 52 194 m 52 246 l S
+0.13 0.20 0.29 rg BT /F1 8.5 Tf 1 0 0 1 64.0 230.0 Tm (python -m venv .venv) Tj ET
+0.13 0.20 0.29 rg BT /F1 8.5 Tf 1 0 0 1 64.0 218.0 Tm (.\\.venv\\Scripts\\Activate.ps1) Tj ET
+0.13 0.20 0.29 rg BT /F1 8.5 Tf 1 0 0 1 64.0 206.0 Tm (python -m pip install -r requirements.txt) Tj ET
+0.82 0.86 0.91 RG 0.7 w 52 48 m 543 48 l S
+0.42 0.47 0.54 rg BT /F1 7.5 Tf 1 0 0 1 52.0 31.0 Tm (LocalStack-based image thumbnail demo | Prepared 13 October 2026) Tj ET
+0.42 0.47 0.54 rg BT /F1 7.5 Tf 1 0 0 1 505.0 31.0 Tm (Page 4) Tj ET
+endstream
+endobj
+12 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 11 0 R >>
+endobj
+13 0 obj
+<< /Length 4223 >>
+stream
+1 1 1 rg 0 0 595 842 re f
+0.12 0.29 0.55 rg BT /F2 8 Tf 1 0 0 1 52.0 814.0 Tm (SERVERLESS IMAGE PROCESSOR) Tj ET
+0.38 0.43 0.50 rg BT /F1 8 Tf 1 0 0 1 454.0 814.0 Tm (PROJECT REPORT) Tj ET
+0.82 0.86 0.91 RG 0.7 w 52 801 m 543 801 l S
+0.12 0.29 0.55 rg BT /F2 16 Tf 1 0 0 1 52.0 772.0 Tm (8. Setup and run instructions \(continued\)) Tj ET
+0.79 0.85 0.92 RG 0.8 w 52 763 m 543 763 l S
+0.12 0.29 0.55 rg BT /F2 11.5 Tf 1 0 0 1 52.0 746.0 Tm (Start the LocalStack browser demonstration) Tj ET
+0.95 0.97 0.99 rg 52 657 491 76 re f
+0.20 0.44 0.74 RG 2.2 w 52 657 m 52 733 l S
+0.13 0.20 0.29 rg BT /F1 8.5 Tf 1 0 0 1 64.0 717.0 Tm (docker compose up -d localstack) Tj ET
+0.13 0.20 0.29 rg BT /F1 8.5 Tf 1 0 0 1 64.0 705.0 Tm (docker compose ps) Tj ET
+0.13 0.20 0.29 rg BT /F1 8.5 Tf 1 0 0 1 64.0 693.0 Tm (docker compose run --build --rm lambda-package) Tj ET
+0.13 0.20 0.29 rg BT /F1 8.5 Tf 1 0 0 1 64.0 681.0 Tm (python setup_localstack.py) Tj ET
+0.13 0.20 0.29 rg BT /F1 8.5 Tf 1 0 0 1 64.0 669.0 Tm (python -m streamlit run app.py) Tj ET
+0.16 0.22 0.32 rg BT /F1 10.1 Tf 1 0 0 1 52.0 642.0 Tm (Wait for the localstack service to report healthy before running setup_localstack.py. The) Tj ET
+0.16 0.22 0.32 rg BT /F1 10.1 Tf 1 0 0 1 52.0 627.0 Tm (package build writes build\\lambda.zip. The setup script then creates or updates the) Tj ET
+0.16 0.22 0.32 rg BT /F1 10.1 Tf 1 0 0 1 52.0 612.0 Tm (buckets, Lambda function, invoke permission, and S3 event notification. Streamlit prints) Tj ET
+0.16 0.22 0.32 rg BT /F1 10.1 Tf 1 0 0 1 52.0 597.0 Tm (the local browser URL after starting.) Tj ET
+0.12 0.29 0.55 rg BT /F2 11.5 Tf 1 0 0 1 52.0 577.0 Tm (Test the local-folder processor) Tj ET
+0.95 0.97 0.99 rg 52 524 491 40 re f
+0.20 0.44 0.74 RG 2.2 w 52 524 m 52 564 l S
+0.13 0.20 0.29 rg BT /F1 8.5 Tf 1 0 0 1 64.0 548.0 Tm (python -m unittest -v test_local) Tj ET
+0.13 0.20 0.29 rg BT /F1 8.5 Tf 1 0 0 1 64.0 536.0 Tm (python image_processor.py) Tj ET
+0.12 0.29 0.55 rg BT /F2 11.5 Tf 1 0 0 1 52.0 509.0 Tm (Stop services) Tj ET
+0.95 0.97 0.99 rg 52 468 491 28 re f
+0.20 0.44 0.74 RG 2.2 w 52 468 m 52 496 l S
+0.13 0.20 0.29 rg BT /F1 8.5 Tf 1 0 0 1 64.0 480.0 Tm (docker compose down) Tj ET
+0.16 0.22 0.32 rg BT /F1 9.8 Tf 1 0 0 1 52.0 453.0 Tm (The LocalStack data directory is .localstack and persists simulated AWS state. Stopping the) Tj ET
+0.16 0.22 0.32 rg BT /F1 9.8 Tf 1 0 0 1 52.0 439.0 Tm (containers does not imply that bucket contents have been deleted. Resetting LocalStack data) Tj ET
+0.16 0.22 0.32 rg BT /F1 9.8 Tf 1 0 0 1 52.0 425.0 Tm (is destructive; only do so when the stored demo data is no longer needed.) Tj ET
+0.12 0.29 0.55 rg BT /F2 16 Tf 1 0 0 1 52.0 403.0 Tm (9. Verification and current status) Tj ET
+0.79 0.85 0.92 RG 0.8 w 52 394 m 543 394 l S
+0.93 0.96 0.99 rg 52 273 491 106 re f
+0.12 0.29 0.55 rg BT /F2 10.5 Tf 1 0 0 1 65.0 360.0 Tm (OBSERVED CHECKS AT REPORT PREPARATION) Tj ET
+0.16 0.22 0.32 rg BT /F1 9.2 Tf 1 0 0 1 65.0 341.0 Tm (Automated tests: 6 test_local.py tests passed.) Tj ET
+0.16 0.22 0.32 rg BT /F1 9.2 Tf 1 0 0 1 65.0 325.0 Tm (The Streamlit UI rendered in an AppTest smoke check without an app exception.) Tj ET
+0.16 0.22 0.32 rg BT /F1 9.2 Tf 1 0 0 1 65.0 309.0 Tm (The Lambda deployment ZIP exists at build/lambda.zip \(about 7.6 MB\).) Tj ET
+0.16 0.22 0.32 rg BT /F1 9.2 Tf 1 0 0 1 65.0 293.0 Tm (docker compose ps showed no running Compose services at the time checked.) Tj ET
+0.16 0.22 0.32 rg BT /F1 10 Tf 1 0 0 1 52.0 259.0 Tm (The unit tests cover local image processing and helper behavior; they are not integration) Tj ET
+0.16 0.22 0.32 rg BT /F1 10 Tf 1 0 0 1 52.0 244.0 Tm (tests for S3 event delivery or Lambda execution. Since LocalStack was not running at the) Tj ET
+0.16 0.22 0.32 rg BT /F1 10 Tf 1 0 0 1 52.0 229.0 Tm (time of inspection, the browser upload -> S3 -> Lambda -> S3 -> browser result was not) Tj ET
+0.16 0.22 0.32 rg BT /F1 10 Tf 1 0 0 1 52.0 214.0 Tm (freshly verified end to end for this report.) Tj ET
+0.82 0.86 0.91 RG 0.7 w 52 48 m 543 48 l S
+0.42 0.47 0.54 rg BT /F1 7.5 Tf 1 0 0 1 52.0 31.0 Tm (LocalStack-based image thumbnail demo | Prepared 13 October 2026) Tj ET
+0.42 0.47 0.54 rg BT /F1 7.5 Tf 1 0 0 1 505.0 31.0 Tm (Page 5) Tj ET
+endstream
+endobj
+14 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 13 0 R >>
+endobj
+15 0 obj
+<< /Length 7239 >>
+stream
+1 1 1 rg 0 0 595 842 re f
+0.12 0.29 0.55 rg BT /F2 8 Tf 1 0 0 1 52.0 814.0 Tm (SERVERLESS IMAGE PROCESSOR) Tj ET
+0.38 0.43 0.50 rg BT /F1 8 Tf 1 0 0 1 454.0 814.0 Tm (PROJECT REPORT) Tj ET
+0.82 0.86 0.91 RG 0.7 w 52 801 m 543 801 l S
+0.12 0.29 0.55 rg BT /F2 16 Tf 1 0 0 1 52.0 772.0 Tm (10. Test coverage and limitations) Tj ET
+0.79 0.85 0.92 RG 0.8 w 52 763 m 543 763 l S
+0.16 0.22 0.32 rg BT /F1 10.1 Tf 1 0 0 1 52.0 746.0 Tm (The six existing tests exercise: creating a thumbnail from bytes; thumbnail dimensions for) Tj ET
+0.16 0.22 0.32 rg BT /F1 10.1 Tf 1 0 0 1 52.0 731.0 Tm (a large image; leaving a smaller image at its original size; ignoring a non-image file;) Tj ET
+0.16 0.22 0.32 rg BT /F1 10.1 Tf 1 0 0 1 52.0 716.0 Tm (handling JPEG filename extension case; deriving an S3 thumbnail key; rejecting the same) Tj ET
+0.16 0.22 0.32 rg BT /F1 10.1 Tf 1 0 0 1 52.0 701.0 Tm (input and output folder; and rejecting a missing input directory. Some of these behaviors) Tj ET
+0.16 0.22 0.32 rg BT /F1 10.1 Tf 1 0 0 1 52.0 686.0 Tm (are combined in individual test methods.) Tj ET
+0.16 0.22 0.32 rg BT /F1 10.1 Tf 1 0 0 1 52.0 666.0 Tm (The test suite does not mock boto3 in test_local.py, start LocalStack, assert Lambda) Tj ET
+0.16 0.22 0.32 rg BT /F1 10.1 Tf 1 0 0 1 52.0 651.0 Tm (deployment responses, verify an S3 bucket notification, test browser upload actions, or) Tj ET
+0.16 0.22 0.32 rg BT /F1 10.1 Tf 1 0 0 1 52.0 636.0 Tm (test production AWS permissions. The UI has been smoke-tested for rendering, but the live) Tj ET
+0.16 0.22 0.32 rg BT /F1 10.1 Tf 1 0 0 1 52.0 621.0 Tm (LocalStack event chain needs a separate run.) Tj ET
+0.12 0.29 0.55 rg BT /F2 16 Tf 1 0 0 1 52.0 598.0 Tm (11. Security and deployment boundary) Tj ET
+0.79 0.85 0.92 RG 0.8 w 52 589 m 543 589 l S
+0.12 0.40 0.72 rg BT /F2 10 Tf 1 0 0 1 57.0 572.0 Tm (-) Tj ET
+0.16 0.22 0.32 rg BT /F1 9.7 Tf 1 0 0 1 71.0 572.0 Tm (The configured endpoint, bucket names, and test credentials target local development. Do) Tj ET
+0.12 0.40 0.72 rg BT /F2 10 Tf 1 0 0 1 57.0 558.0 Tm ( ) Tj ET
+0.16 0.22 0.32 rg BT /F1 9.7 Tf 1 0 0 1 71.0 558.0 Tm (not treat these credentials as production secrets or use them against real AWS.) Tj ET
+0.12 0.40 0.72 rg BT /F2 10 Tf 1 0 0 1 57.0 541.0 Tm (-) Tj ET
+0.16 0.22 0.32 rg BT /F1 9.7 Tf 1 0 0 1 71.0 541.0 Tm (The repository setup provisions simulated services on the local Docker network. There is) Tj ET
+0.12 0.40 0.72 rg BT /F2 10 Tf 1 0 0 1 57.0 527.0 Tm ( ) Tj ET
+0.16 0.22 0.32 rg BT /F1 9.7 Tf 1 0 0 1 71.0 527.0 Tm (no public hosting, authentication, user management, or production IAM deployment) Tj ET
+0.12 0.40 0.72 rg BT /F2 10 Tf 1 0 0 1 57.0 513.0 Tm ( ) Tj ET
+0.16 0.22 0.32 rg BT /F1 9.7 Tf 1 0 0 1 71.0 513.0 Tm (described by this implementation.) Tj ET
+0.12 0.40 0.72 rg BT /F2 10 Tf 1 0 0 1 57.0 496.0 Tm (-) Tj ET
+0.16 0.22 0.32 rg BT /F1 9.7 Tf 1 0 0 1 71.0 496.0 Tm (For production, define an AWS account/region, least-privilege IAM roles and bucket) Tj ET
+0.12 0.40 0.72 rg BT /F2 10 Tf 1 0 0 1 57.0 482.0 Tm ( ) Tj ET
+0.16 0.22 0.32 rg BT /F1 9.7 Tf 1 0 0 1 71.0 482.0 Tm (policies, secret/configuration management, network exposure, authentication, upload) Tj ET
+0.12 0.40 0.72 rg BT /F2 10 Tf 1 0 0 1 57.0 468.0 Tm ( ) Tj ET
+0.16 0.22 0.32 rg BT /F1 9.7 Tf 1 0 0 1 71.0 468.0 Tm (size/type limits, monitoring, retention, and error handling.) Tj ET
+0.12 0.40 0.72 rg BT /F2 10 Tf 1 0 0 1 57.0 451.0 Tm (-) Tj ET
+0.16 0.22 0.32 rg BT /F1 9.7 Tf 1 0 0 1 71.0 451.0 Tm (The S3 buckets are intended for the LocalStack demonstration. The UI upload and output) Tj ET
+0.12 0.40 0.72 rg BT /F2 10 Tf 1 0 0 1 57.0 437.0 Tm ( ) Tj ET
+0.16 0.22 0.32 rg BT /F1 9.7 Tf 1 0 0 1 71.0 437.0 Tm (are not written to input_images/output_images.) Tj ET
+0.12 0.29 0.55 rg BT /F2 16 Tf 1 0 0 1 52.0 417.0 Tm (12. Recommended next steps for completion) Tj ET
+0.79 0.85 0.92 RG 0.8 w 52 408 m 543 408 l S
+0.12 0.40 0.72 rg BT /F2 10 Tf 1 0 0 1 57.0 391.0 Tm (-) Tj ET
+0.16 0.22 0.32 rg BT /F1 9.7 Tf 1 0 0 1 71.0 391.0 Tm (Start Docker Desktop and verify docker compose ps reports LocalStack healthy.) Tj ET
+0.12 0.40 0.72 rg BT /F2 10 Tf 1 0 0 1 57.0 374.0 Tm (-) Tj ET
+0.16 0.22 0.32 rg BT /F1 9.7 Tf 1 0 0 1 71.0 374.0 Tm (Build the Lambda ZIP and run setup_localstack.py; inspect setup output and LocalStack) Tj ET
+0.12 0.40 0.72 rg BT /F2 10 Tf 1 0 0 1 57.0 360.0 Tm ( ) Tj ET
+0.16 0.22 0.32 rg BT /F1 9.7 Tf 1 0 0 1 71.0 360.0 Tm (logs for failures.) Tj ET
+0.12 0.40 0.72 rg BT /F2 10 Tf 1 0 0 1 57.0 343.0 Tm (-) Tj ET
+0.16 0.22 0.32 rg BT /F1 9.7 Tf 1 0 0 1 71.0 343.0 Tm (Start Streamlit, upload a small supported image, and verify preview and download in the) Tj ET
+0.12 0.40 0.72 rg BT /F2 10 Tf 1 0 0 1 57.0 329.0 Tm ( ) Tj ET
+0.16 0.22 0.32 rg BT /F1 9.7 Tf 1 0 0 1 71.0 329.0 Tm (browser.) Tj ET
+0.12 0.40 0.72 rg BT /F2 10 Tf 1 0 0 1 57.0 312.0 Tm (-) Tj ET
+0.16 0.22 0.32 rg BT /F1 9.7 Tf 1 0 0 1 71.0 312.0 Tm (Confirm the original exists in input-bucket and the matching _thumbnail object exists in) Tj ET
+0.12 0.40 0.72 rg BT /F2 10 Tf 1 0 0 1 57.0 298.0 Tm ( ) Tj ET
+0.16 0.22 0.32 rg BT /F1 9.7 Tf 1 0 0 1 71.0 298.0 Tm (output-bucket; inspect Lambda logs if the UI times out.) Tj ET
+0.12 0.40 0.72 rg BT /F2 10 Tf 1 0 0 1 57.0 281.0 Tm (-) Tj ET
+0.16 0.22 0.32 rg BT /F1 9.7 Tf 1 0 0 1 71.0 281.0 Tm (Repeat with a JPEG and PNG, then a small image and an unsupported extension to check) Tj ET
+0.12 0.40 0.72 rg BT /F2 10 Tf 1 0 0 1 57.0 267.0 Tm ( ) Tj ET
+0.16 0.22 0.32 rg BT /F1 9.7 Tf 1 0 0 1 71.0 267.0 Tm (expected behavior.) Tj ET
+0.12 0.40 0.72 rg BT /F2 10 Tf 1 0 0 1 57.0 250.0 Tm (-) Tj ET
+0.16 0.22 0.32 rg BT /F1 9.7 Tf 1 0 0 1 71.0 250.0 Tm (If production hosting is a goal, treat it as a distinct deployment phase and design real) Tj ET
+0.12 0.40 0.72 rg BT /F2 10 Tf 1 0 0 1 57.0 236.0 Tm ( ) Tj ET
+0.16 0.22 0.32 rg BT /F1 9.7 Tf 1 0 0 1 71.0 236.0 Tm (AWS infrastructure and controls before exposing the application.) Tj ET
+0.12 0.29 0.55 rg BT /F2 16 Tf 1 0 0 1 52.0 216.0 Tm (13. Short presentation summary) Tj ET
+0.79 0.85 0.92 RG 0.8 w 52 207 m 543 207 l S
+0.16 0.22 0.32 rg BT /F1 10.3 Tf 1 0 0 1 52.0 190.0 Tm (This project demonstrates two ways to generate image thumbnails. The local Python) Tj ET
+0.16 0.22 0.32 rg BT /F1 10.3 Tf 1 0 0 1 52.0 174.0 Tm (workflow processes files in folders. The browser workflow uses Streamlit to upload to) Tj ET
+0.16 0.22 0.32 rg BT /F1 10.3 Tf 1 0 0 1 52.0 158.0 Tm (LocalStack S3, trigger a Lambda-compatible processor, and preview or download the result.) Tj ET
+0.16 0.22 0.32 rg BT /F1 10.3 Tf 1 0 0 1 52.0 142.0 Tm (The image processing and unit tests are implemented; the remaining validation for the) Tj ET
+0.16 0.22 0.32 rg BT /F1 10.3 Tf 1 0 0 1 52.0 126.0 Tm (browser demo is a fresh end-to-end run with LocalStack active. LocalStack is a) Tj ET
+0.16 0.22 0.32 rg BT /F1 10.3 Tf 1 0 0 1 52.0 110.0 Tm (simulation, so production use would require real AWS deployment and security work.) Tj ET
+0.82 0.86 0.91 RG 0.7 w 52 48 m 543 48 l S
+0.42 0.47 0.54 rg BT /F1 7.5 Tf 1 0 0 1 52.0 31.0 Tm (LocalStack-based image thumbnail demo | Prepared 13 October 2026) Tj ET
+0.42 0.47 0.54 rg BT /F1 7.5 Tf 1 0 0 1 505.0 31.0 Tm (Page 6) Tj ET
+endstream
+endobj
+16 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 15 0 R >>
+endobj
+xref
+0 17
+0000000000 65535 f 
+0000000017 00000 n 
+0000000066 00000 n 
+0000000157 00000 n 
+0000000254 00000 n 
+0000000356 00000 n 
+0000002819 00000 n 
+0000002955 00000 n 
+0000007593 00000 n 
+0000007729 00000 n 
+0000013049 00000 n 
+0000013186 00000 n 
+0000019431 00000 n 
+0000019569 00000 n 
+0000023845 00000 n 
+0000023983 00000 n 
+0000031275 00000 n 
+trailer
+<< /Size 17 /Root 1 0 R >>
+startxref
+31413
+%%EOF
